@@ -49,7 +49,7 @@ export default function Services() {
             className="relative bg-(--bg-card)"
             style={{ paddingTop: "72px", paddingBottom: "0", paddingLeft: "30px", paddingRight: "30px" }}
         >
-            {/* ── "Our Services" — giant muted title ── */}
+            {/* ---- "Our Services" — giant muted title ---- */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function Services() {
                 </h2>
             </motion.div>
 
-            {/* ── 3-column info row ── */}
+            {/* ---- 3-column info row ---- */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export default function Services() {
                 </p>
             </motion.div>
 
-            {/* ── Horizontal accordion + summary panel ── */}
+            {/* ---- Horizontal accordion + summary panel ---- */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

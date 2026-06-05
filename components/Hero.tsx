@@ -46,7 +46,7 @@ export default function Hero() {
             className="relative min-h-screen flex flex-col justify-center overflow-hidden"
             style={{ paddingBottom: "64px" }}
         >
-            {/* ── Top-left label ── */}
+            {/* ---- Top-left label ---- */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -66,7 +66,7 @@ export default function Hero() {
                 </p>
             </motion.div>
 
-            {/* ── Neural Network badge — top right, flush to edge ── */}
+            {/* ---- Neural Network badge — top right, flush to edge ---- */}
             <motion.a
                 href="#work"
                 initial={{ opacity: 0, x: 20 }}
@@ -119,7 +119,7 @@ export default function Hero() {
                 </div>
             </motion.a>
 
-            {/* ── Main headline — offset left to ~20% of viewport ── */}
+            {/* ---- Main headline — offset left to ~20% of viewport ---- */}
             <div style={{ paddingLeft: "clamp(180px, 18vw, 260px)", paddingRight: "240px", maxWidth: "100%" , paddingTop: "90px"}}>
                 {/* Line 1: — The smarter way */}
                 <div className="overflow-hidden">
@@ -185,7 +185,7 @@ export default function Hero() {
                     </motion.div>
                 </div>
 
-                {/* ── CTA row ── */}
+                {/* ---- CTA row ---- */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -228,7 +228,7 @@ export default function Hero() {
                     </a>
                 </motion.div>
 
-                {/* ── Stats row ── */}
+                {/* ---- Stats row ---- */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -277,7 +277,7 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* ── Scroll indicator ── */}
+            {/* ---- Scroll indicator ---- */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

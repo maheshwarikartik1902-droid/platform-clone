@@ -36,67 +36,84 @@ export default function FAQ() {
     const toggle = (i: number) => setActive(active === i ? null : i);
 
     return (
-        <section id="faq" className="relative mx-15 py-24 px-8 lg:px-16" style={{ background: "var(--bg)" }}>
-
-            {/* ── Header ── */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="mb-16"
-            >
-                <h2
+        <section
+            id="services"
+            className="relative bg-(--bg-card)"
+            style={{ paddingTop: "72px", paddingBottom: "30px", paddingLeft: "30px", paddingRight: "30px" }}
+        >
+            {/* ---- Header Section ---- */}
+            <div className="max-w-360 mx-20 mb-20 pb-20">
+                <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
                     style={{
-                        fontSize: "clamp(2.5rem, 5vw, 5rem)",
-                        fontWeight: 700,
+                        fontSize: "clamp(4rem, 11vw, 11rem)",
+                        fontWeight: 600,
                         letterSpacing: "-0.04em",
-                        color: "var(--text-muted)",
+                        color: "var(--text-dim)",
                         lineHeight: 1.0,
-                        marginBottom: "40px",
+                        marginLeft: "-4px",
+                        marginBottom: "48px",
+                        paddingTop: "200px"
                     }}
                 >
                     Questions &amp; Answers
-                </h2>
+                </motion.h2>
 
-                <div className="flex items-start justify-between flex-wrap gap-8">
-                    {/* Badge + statement */}
-                    <div className="flex items-start gap-6">
-                        {/* Section badge (vertical orange bar) */}
-                        <div style={{ display: "flex", flexDirection: "column", gap: "4px", paddingTop: "2px" }}>
-                            <div style={{ width: "2px", height: "28px", background: "var(--orange)" }} />
-                        </div>
-                        <div>
-                            <p style={{ color: "var(--text-muted)", fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "2px" }}>006</p>
-                            <p style={{ color: "var(--text-muted)", fontSize: "11px", letterSpacing: "0.12em" }}>plat—form</p>
-                        </div>
-                        <p
-                            style={{
-                                fontSize: "clamp(1.2rem, 2.5vw, 1.75rem)",
-                                fontWeight: 600,
-                                letterSpacing: "-0.03em",
-                                color: "var(--text)",
-                                maxWidth: "380px",
-                                lineHeight: 1.25,
-                                marginLeft: "16px",
-                            }}
-                        >
-                            Simple explanations to help you get started move faster.
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, delay: 0.15 }}
+                    className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
+                >
+                    {/* Left: 003 Badge */}
+                    <div className="md:col-span-2 border-l-2 pl-4" style={{ borderColor: "var(--orange)" }}>
+                        <p style={{ color: "var(--text)", fontSize: "18px", fontWeight: 400, lineHeight: 1.2 }}>
+                            005
+                        </p>
+                        <p style={{ color: "var(--text-muted)", fontSize: "13px", marginTop: "4px" }}>
+                            plat—form
                         </p>
                     </div>
 
-                    {/* Right note */}
-                    <p
-                        className="hidden lg:block"
-                        style={{ color: "var(--text-muted)", fontSize: "13px", lineHeight: 1.6, maxWidth: "180px", textAlign: "right" }}
-                    >
-                        Spend less time guessing and more time building.
-                    </p>
-                </div>
-            </motion.div>
+                    {/* Center: Statement */}
+                    <div className="md:col-span-7">
+                        <h3
+                            style={{
+                                fontSize: "clamp(1.75rem, 3.5vw, 3.5rem)",
+                                fontWeight: 500,
+                                letterSpacing: "-0.03em",
+                                color: "var(--text)",
+                                lineHeight: 1.15,
+                            }}
+                        >
+                            simple explanations to help you get started move faster.
+                        </h3>
+                    </div>
 
-            {/* ── Two-column body ── */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-px" style={{ background: "var(--border)" }}>
+                    {/* Right: Description */}
+                    <div className="md:col-span-3 flex md:justify-end">
+                        <p
+                            style={{
+                                color: "var(--text-muted)",
+                                fontSize: "14px",
+                                lineHeight: 1.6,
+                                maxWidth: "200px",
+                                textAlign: "left",
+                            }}
+                            className="md:text-right"
+                        >
+                            Spend less time guessing and more time building.
+                        </p>
+                    </div>
+                </motion.div>
+            </div>
+
+            {/* ---- Two-column body ---- */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-px px-20 mt-30 pt-20" style={{ background: "var(--border)" }}>
 
                 {/* LEFT — FAQ accordion */}
                 <motion.div

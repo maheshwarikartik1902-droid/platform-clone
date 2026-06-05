@@ -7,7 +7,7 @@ import Services from "@/components/Services";
 import Process from "@/components/Process";
 import Analytics from "@/components/Analytics";
 import Pricing from "@/components/Pricing";
-import FAQ from "@/components/FAQ";
+import FAQ from "@/components/Faq";
 
 export default function Home() {
     return (
@@ -31,7 +31,7 @@ export default function Home() {
                 <FAQ />
 
                 {/*
-                    ── Remaining sections ──
+                    ---- Remaining sections ----
                     <Team />
                     <Testimonials />
                     <Contact />

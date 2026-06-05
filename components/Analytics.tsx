@@ -7,7 +7,7 @@ import {
     LineChart, Line, CartesianGrid,
 } from "recharts";
 
-// ─── Data ───────────────────────────────────────────────────────────────────
+// ------ Data --------------------------------------------------------------------------------------------------------------------------------------
 const uptimeBars = Array.from({ length: 30 }, (_, i) => ({
     day: i + 1,
     value: 85 + Math.random() * 15,
@@ -35,7 +35,7 @@ const newsTicker = [
     "3ms Average Response Time",
 ];
 
-// ─── Clock Gauge Component ───────────────────────────────────────────────────
+// ------ Clock Gauge Component ------------------------------------------------------------------------------------------------------
 function ClockGauge({ status, color }: { status: string; color: string }) {
     const r = 22;
     const cx = 28, cy = 28;
@@ -80,7 +80,7 @@ function ClockGauge({ status, color }: { status: string; color: string }) {
     );
 }
 
-// ─── Donut Chart ─────────────────────────────────────────────────────────────
+// ------ Donut Chart --------------------------------------------------------------------------------------------------------------------------
 function DonutChart() {
     const segments = [
         { pct: 66, color: "#E84D2B" },
@@ -118,7 +118,7 @@ function DonutChart() {
     );
 }
 
-// ─── Animated Counter ─────────────────────────────────────────────────────────
+// ------ Animated Counter ------------------------------------------------------------------------------------------------------------------
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     const [val, setVal] = useState(0);
     const ref = useRef<HTMLSpanElement>(null);
@@ -142,7 +142,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     return <span ref={ref}>{val.toFixed(1)}{suffix}</span>;
 }
 
-// ─── CARD wrapper ─────────────────────────────────────────────────────────────
+// ------ CARD wrapper --------------------------------------------------------------------------------------------------------------------------
 const CARD = ({ children, style = {}, className = "" }: {
     children: React.ReactNode;
     style?: React.CSSProperties;
@@ -162,7 +162,7 @@ const CARD = ({ children, style = {}, className = "" }: {
     </div>
 );
 
-// ─── Main Component ───────────────────────────────────────────────────────────
+// ------ Main Component ----------------------------------------------------------------------------------------------------------------------
 export default function Analytics() {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -186,7 +186,7 @@ export default function Analytics() {
             className="relative w-full pt-28 pb-24 px-6 md:px-12 lg:px-16"
             style={{ background: "var(--bg)" }}
         >
-            {/* ── Section Header ── */}
+            {/* ---- Section Header ---- */}
             <motion.div {...fadeUp(0)} className="mb-14">
                 {/* Big title */}
                 <h2
@@ -230,7 +230,7 @@ export default function Analytics() {
             ══════════════════════════════════════════════ */}
             <motion.div {...fadeUp(0.15)}>
 
-                {/* ── TOP ROW: 4 columns ── */}
+                {/* ---- TOP ROW: 4 columns ---- */}
                 <div
                     style={{
                         display: "grid",
@@ -366,7 +366,7 @@ export default function Analytics() {
                     </CARD>
                 </div>
 
-                {/* ── BOTTOM ROW: 4 columns ── */}
+                {/* ---- BOTTOM ROW: 4 columns ---- */}
                 <div
                     style={{
                         display: "grid",
@@ -522,7 +522,7 @@ export default function Analytics() {
                     </CARD>
                 </div>
 
-                {/* ── TICKER ROW ── */}
+                {/* ---- TICKER ROW ---- */}
                 <div
                     style={{
                         marginTop: "6px",

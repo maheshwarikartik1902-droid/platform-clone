@@ -39,7 +39,7 @@ export default function Process() {
             className="relative w-full pt-32 pb-24 px-6 md:px-12 lg:px-16"
             style={{ background: "var(--bg-secondary)" }}
         >
-            {/* ── Header Section ── */}
+            {/* ---- Header Section ---- */}
             <div className="max-w-360 mx-auto mb-20">
                 <motion.h2
                     initial={{ opacity: 0, y: 30 }}
@@ -111,7 +111,7 @@ export default function Process() {
                 </motion.div>
             </div>
 
-            {/* ── Main Interactive Carousel ── */}
+            {/* ---- Main Interactive Carousel ---- */}
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

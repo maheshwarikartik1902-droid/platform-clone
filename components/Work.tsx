@@ -59,7 +59,7 @@ export default function Work() {
     return (
         <section id="work" className="relative bg-(--bg-card)" style={{ paddingTop: "72px", paddingBottom: "0", paddingLeft: "30px", paddingRight: "30px" }}>
 
-            {/* ── "Our Work" — giant muted title, top-left ── */}
+            {/* ---- "Our Work" — giant muted title, top-left ---- */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function Work() {
                 </h2>
             </motion.div>
 
-            {/* ── 3-column info row ── */}
+            {/* ---- 3-column info row ---- */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +141,7 @@ export default function Work() {
                 </p>
             </motion.div>
 
-            {/* ── Featured Product + Product Lineup panel ── */}
+            {/* ---- Featured Product + Product Lineup panel ---- */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +225,7 @@ export default function Work() {
                 </div>
             </motion.div>
 
-            {/* ── Product grid ── */}
+            {/* ---- Product grid ---- */}
             <div
                 style={{
                     display: "grid",

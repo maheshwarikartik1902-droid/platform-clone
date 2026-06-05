@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
 
-/* ─── Plan data ───────────────────────────────────────────────── */
+/* ------ Plan data -------------------------------------------------------------------------------------------------- */
 const plans = [
     {
         id: "studio",
@@ -63,7 +63,7 @@ const plans = [
     },
 ];
 
-/* ─── Tiny 3D cube SVG illustration per plan ────────────────── */
+/* ------ Tiny 3D cube SVG illustration per plan ------------------------------------ */
 function PlanIllustration({ id, highlight }: { id: string; highlight: boolean }) {
     if (id === "studio") {
         return (
@@ -123,7 +123,7 @@ function PlanIllustration({ id, highlight }: { id: string; highlight: boolean })
     );
 }
 
-/* ─── Inline toggle (Monthly • toggle • Yearly) per row ─────── */
+/* ------ Inline toggle (Monthly • toggle • Yearly) per row -------------- */
 function RowToggle({
     annual,
     onToggle,
@@ -174,7 +174,7 @@ function RowToggle({
     );
 }
 
-/* ─── Main component ─────────────────────────────────────────── */
+/* ------ Main component -------------------------------------------------------------------------------------- */
 export default function Pricing() {
     const [annual, setAnnual] = useState(false);
 
@@ -202,7 +202,7 @@ export default function Pricing() {
             {/* Dot grid */}
             <div className="absolute inset-0 dot-grid opacity-20 pointer-events-none" />
 
-            {/* ── Header ── */}
+            {/* ---- Header ---- */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -259,7 +259,7 @@ export default function Pricing() {
                 </div>
             </motion.div>
 
-            {/* ── Table wrapper ── */}
+            {/* ---- Table wrapper ---- */}
             <div style={{ padding: "0 64px", position: "relative" }}>
                 {/* Outer border container */}
                 <div
@@ -268,7 +268,7 @@ export default function Pricing() {
                         background: "var(--bg-card)",
                     }}
                 >
-                    {/* ── Column header row ── */}
+                    {/* ---- Column header row ---- */}
                     <div
                         style={{
                             display: "flex",
@@ -286,7 +286,7 @@ export default function Pricing() {
                         <div style={{ flex: COL.cta, padding: "14px 28px" }} />
                     </div>
 
-                    {/* ── Plan rows ── */}
+                    {/* ---- Plan rows ---- */}
                     {plans.map((plan, i) => (
                         <motion.div
                             key={plan.id}
@@ -302,7 +302,7 @@ export default function Pricing() {
                                 position: "relative",
                             }}
                         >
-                            {/* ── Col 1: Name + illustration ── */}
+                            {/* ---- Col 1: Name + illustration ---- */}
                             <div
                                 style={{
                                     flex: COL.name,
@@ -331,7 +331,7 @@ export default function Pricing() {
                                 </div>
                             </div>
 
-                            {/* ── Col 2: Price + toggle ── */}
+                            {/* ---- Col 2: Price + toggle ---- */}
                             <div
                                 style={{
                                     flex: COL.price,
@@ -382,7 +382,7 @@ export default function Pricing() {
                                 />
                             </div>
 
-                            {/* ── Col 3: Tier name + Seats ── */}
+                            {/* ---- Col 3: Tier name + Seats ---- */}
                             <div
                                 style={{
                                     flex: COL.tier,
@@ -445,7 +445,7 @@ export default function Pricing() {
                                 </div>
                             </div>
 
-                            {/* ── Col 4: Features ── */}
+                            {/* ---- Col 4: Features ---- */}
                             <div
                                 style={{
                                     flex: COL.features,
@@ -499,7 +499,7 @@ export default function Pricing() {
                                 </ul>
                             </div>
 
-                            {/* ── Col 5: CTA ── */}
+                            {/* ---- Col 5: CTA ---- */}
                             <div
                                 style={{
                                     flex: COL.cta,
@@ -544,7 +544,7 @@ export default function Pricing() {
                     ))}
                 </div>
 
-                {/* ── Bottom note ── */}
+                {/* ---- Bottom note ---- */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

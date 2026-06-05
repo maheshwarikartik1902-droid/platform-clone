@@ -40,7 +40,7 @@ export default function Tagline() {
                 padding: "80px 0 80px 64px",
             }}
         >
-            {/* ── 3D Orange Hexagonal Cluster — right side ── */}
+            {/* ---- 3D Orange Hexagonal Cluster — right side ---- */}
             <div
                 style={{
                     position: "absolute",
@@ -181,7 +181,7 @@ export default function Tagline() {
                 />
             </div>
 
-            {/* ── Statement text ── */}
+            {/* ---- Statement text ---- */}
             <div style={{ maxWidth: "1100px", position: "relative", zIndex: 2 }}>
                 <motion.div
                     initial="hidden"
