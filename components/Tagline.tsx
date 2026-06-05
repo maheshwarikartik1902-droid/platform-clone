@@ -23,7 +23,7 @@ export default function Tagline() {
             transition: {
                 delay: i * 0.06,
                 duration: 0.7,
-                ease: [0.22, 1, 0.36, 1],
+                ease: ({} as any).easeInOut,
             },
         }),
     };

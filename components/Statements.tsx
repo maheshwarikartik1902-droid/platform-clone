@@ -21,7 +21,7 @@ function AnimatedLine({
     const chars = useMemo(() => Array.from(text), [text]);
 
     return (
-        <span className={`block ${className}`}>
+        <span className={`block ${className} mt-20`}>
             {chars.map((char, index) => {
                 const start = Math.max(0, offset + index * 0.018);
                 const end = Math.min(1, start + 0.18);
@@ -56,7 +56,7 @@ export default function Statement() {
     return (
         <section
             ref={ref}
-            className="relative overflow-hidden bg-(--bg) py-24 pl-6 pr-6 sm:py-28 sm:pl-8 sm:pr-8 lg:py-32 lg:pl-12 lg:pr-10 items-center justify-center flex"
+            className="relative overflow-hidden bg-(--bg) mt-20 py-24 pl-6 pr-6 sm:py-28 sm:pl-8 sm:pr-8 lg:py-32 lg:pl-12 lg:pr-10 items-center justify-center flex"
         >
             {cubes.map((c, i) => (
                 <motion.div
